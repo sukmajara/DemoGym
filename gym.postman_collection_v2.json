@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "79274080-63d4-4550-bb32-7ac425500832",
+		"name": "gym",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21359047"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tes 2\",\r\n    \"email\":\"email tes 1\",\r\n    \"password\":\"tes\",\r\n    \"phoneNumber\":\"tes telp\",\r\n    \"cardNumber\":\"tes card\",\r\n    \"CVV\":\"CVV\",\r\n    \"expDate\":\"expdate\",\r\n    \"nameCardHolder\":\"tes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/register"
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\",\r\n    \"password\":\"tes\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/status"
+					},
+					"response": []
+				},
+				{
+					"name": "confirmUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"6edfe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/confirmtoken"
+					},
+					"response": []
+				},
+				{
+					"name": "resendtoken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/resendtoken"
+					},
+					"response": []
+				},
+				{
+					"name": "resetpassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\",\r\n    \"password\":\"tes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/resetpassword"
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU1OTAzNjEsInJvbGVzIjoiIn0.p-oi2_M6IfAaExsuDANkrQrYcM3SD7t43I3SQ-DLQXmUHydfmxJdorJc5bJTNuhKKxciiU1bI4FcrS5EEivAYRZCN033XqpnplBXPXceNPNJmwKYQ3TQWYgFd_IHejpRER1oPsgDRDGl91SG6Z37RksVPUwDq_yulkj7j5UixgTdV8n47k_7-c4WtzAxmxJCcmQ0q8ug6yd8tKdfjxaMnHLthI1Rx2JBd-JGL4PyURHnl-AkaioVm1gUliDuRBtCayQrjnQEkIx7GD4f7jDLv43l0sia_G46WDnIQfQ7SeQLqjAwRO5PA9BLBTmd5D_jQR2zKO-UkbMhvjxAEOYfvg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\",\r\n    \"password\":\"tes1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/user/changepassword"
+					},
+					"response": []
+				},
+				{
+					"name": "updateInfoUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tes 2\",\r\n    \"cardNumber\": \"tes card\",\r\n    \"phoneNumber\": \"tes telp\",\r\n    \"CVV\": \"CVV\",\r\n    \"expDate\": \"expdate\",\r\n    \"nameCardHolder\": \"tes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/user/updateinfo"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "getAllProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU1OTAzNjEsInJvbGVzIjoiIn0.p-oi2_M6IfAaExsuDANkrQrYcM3SD7t43I3SQ-DLQXmUHydfmxJdorJc5bJTNuhKKxciiU1bI4FcrS5EEivAYRZCN033XqpnplBXPXceNPNJmwKYQ3TQWYgFd_IHejpRER1oPsgDRDGl91SG6Z37RksVPUwDq_yulkj7j5UixgTdV8n47k_7-c4WtzAxmxJCcmQ0q8ug6yd8tKdfjxaMnHLthI1Rx2JBd-JGL4PyURHnl-AkaioVm1gUliDuRBtCayQrjnQEkIx7GD4f7jDLv43l0sia_G46WDnIQfQ7SeQLqjAwRO5PA9BLBTmd5D_jQR2zKO-UkbMhvjxAEOYfvg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/product/list"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Class",
+			"item": [
+				{
+					"name": "registerClass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU1OTQ4MzQsInJvbGVzIjoiIn0.vB333q4M6v9J0sUOn18c7JwfS93tMT4eEg5A0KmFLKlZpg5bbnyMVNzx54EenYPBq7t_i3ZxHEJZYPNajEv3tzDR9XDmiFxnXkw8ppV5nq_gHzIXQ0MyhLDCAaJtyNxQDzdr8Bua_itbYln8_YWDvRPuhsl5aHgrYHylrzRq7JU7dSN1sXLwD6OaSX_go5n0Yb0jdstiEZMv8hB-Xy6FsxoP_f3mvA7CYhwpbSD2kw-3bKgZljINFiEJefG_RWF3gwKSPe_s9icBv60dqnBdimWLtIjPQUgDEoIbIXcwhlonHAxIrZdPa2NYj1E4zWLr27A0Mvne63qFutBfGhhl5g"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"Berat Badan Berlebih/obesitas\",\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/register"
+					},
+					"response": []
+				},
+				{
+					"name": "cancelClass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU1OTQ5MTUsInJvbGVzIjoiIn0.pXpXxvTetVnmkpK2xo8ZbV0PKtLvgU6hAYe0UgEaVgOMvC_Iky_jP8NiS7Icw_rwNth_x13YF9Otj7-fUAQcyBUngrOEjfkoGCtRxIF7bhDk2vPjT67Doq12w8-P1V-viyGfBMMQly79jeYePz6d7rN12EydUnLTraaGHG7FMHP57ILn5793kPAS9_E0nOm_9LyT-dhhea6Dpy6kjaAb92lJjcUc_evItsaJH6LG36_rxY6lORI75gngW7EzT_qXdvSqJpRUosKM5ARTyvAfrvR1cyuJXVKdwFTCLrDcHhjZb4Gv9myaMj-j8Oy6d4HaRf9a0NbxzLpE0W5XaN2yKA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"Berat Badan Berlebih/obesitas\",\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/cancel"
+					},
+					"response": []
+				},
+				{
+					"name": "updateClass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU1OTQ5MTUsInJvbGVzIjoiIn0.pXpXxvTetVnmkpK2xo8ZbV0PKtLvgU6hAYe0UgEaVgOMvC_Iky_jP8NiS7Icw_rwNth_x13YF9Otj7-fUAQcyBUngrOEjfkoGCtRxIF7bhDk2vPjT67Doq12w8-P1V-viyGfBMMQly79jeYePz6d7rN12EydUnLTraaGHG7FMHP57ILn5793kPAS9_E0nOm_9LyT-dhhea6Dpy6kjaAb92lJjcUc_evItsaJH6LG36_rxY6lORI75gngW7EzT_qXdvSqJpRUosKM5ARTyvAfrvR1cyuJXVKdwFTCLrDcHhjZb4Gv9myaMj-j8Oy6d4HaRf9a0NbxzLpE0W5XaN2yKA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"Berat Badan Berlebih/obesitas\",\r\n    \"email\":\"email tes 3\",\r\n    \"quota\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/update"
+					},
+					"response": []
+				},
+				{
+					"name": "infoClass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU2NTI3MzAsInJvbGVzIjoiIn0.gKPF34m6MdhVFjjp0C5VT9oBLdEYWw6CVko8dyzYbDfAh8kXw4uMukPDg4MsbP8vhlBqhAugfikXBJM42T9rzsHLxFFMNI_yDQsIdYZu0VT6gasidD9MCA0IV4rkhK01k8zJsi8p91DdNBg1rzonvrdH3adGNUp6au-RMFTl3OlBJ9g0grITXtze-ypGY7SIjjn2Z21BD6JDUuNCnkkKAntf6hDGxhOVz8NnZ28pe3_b_T-zL4bYjYoAVHBYL-5gJ7jD0qY4eVuD3VuEzkPB2oHUjHf7eMTGf0nO8Sug--ogDYmteKxx766GaFyL8IaLBReVzgYQ7AqYcFnVEl7xOw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/info"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "obes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU2NzU0OTQsInJvbGVzIjoiIn0.WvcEoo2jfcYm5suV6PmOSR-ZxIUSp4wI9jMIuPmDj2Md1Tb46YdX6TBOQQ9IrwcOcakdrYCFAnj9qaPlFfs42I00Xoc7v4_7ly1T49sGF7R0nZd-rxs4X7yx8rPMxEC9PuQ0AfqZfRGoVpFlUkG53vIXjOyMdB8r0EodyvyDya6W01gj7Zvnh7uzGbcc-0GYTFJRQjaviAoKm2wHSI5lRRvIqD7gMxOvKIj17O4ZcbZVwWKbPa8hPk25-HkWyAruevgxhVTJLbDeg8FV9OoIDdHVAnG6KrIUjp3_m2diUXdQ2Y-ByhTbp9FyB99VKP0Wv2p9zsQa6FjhlBZkBkjddg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/obes"
+					},
+					"response": []
+				},
+				{
+					"name": "nonobes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/nonobes"
+					},
+					"response": []
+				},
+				{
+					"name": "confirmOTPpayment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/confirm"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/resendtoken"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
