@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "79274080-63d4-4550-bb32-7ac425500832",
+		"name": "gym",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21359047"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tes 2\",\r\n    \"email\":\"email tes 3\",\r\n    \"password\":\"tes\",\r\n    \"phoneNumber\":\"tes telp\",\r\n    \"cardNumber\":\"tes card\",\r\n    \"CVV\":\"CVV\",\r\n    \"expDate\":\"expdate\",\r\n    \"nameCardHolder\":\"tes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/register"
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\",\r\n    \"password\":\"tes\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/status"
+					},
+					"response": []
+				},
+				{
+					"name": "confirmUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"518ca\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/confirmtoken"
+					},
+					"response": []
+				},
+				{
+					"name": "resendtoken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/resendtoken"
+					},
+					"response": []
+				},
+				{
+					"name": "resetpassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\",\r\n    \"password\":\"tes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/user/resetpassword"
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU1OTAzNjEsInJvbGVzIjoiIn0.p-oi2_M6IfAaExsuDANkrQrYcM3SD7t43I3SQ-DLQXmUHydfmxJdorJc5bJTNuhKKxciiU1bI4FcrS5EEivAYRZCN033XqpnplBXPXceNPNJmwKYQ3TQWYgFd_IHejpRER1oPsgDRDGl91SG6Z37RksVPUwDq_yulkj7j5UixgTdV8n47k_7-c4WtzAxmxJCcmQ0q8ug6yd8tKdfjxaMnHLthI1Rx2JBd-JGL4PyURHnl-AkaioVm1gUliDuRBtCayQrjnQEkIx7GD4f7jDLv43l0sia_G46WDnIQfQ7SeQLqjAwRO5PA9BLBTmd5D_jQR2zKO-UkbMhvjxAEOYfvg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\",\r\n    \"password\":\"tes1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/user/changepassword"
+					},
+					"response": []
+				},
+				{
+					"name": "updateInfoUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tes 2\",\r\n    \"cardNumber\": \"tes card\",\r\n    \"phoneNumber\": \"tes telp\",\r\n    \"CVV\": \"CVV\",\r\n    \"expDate\": \"expdate\",\r\n    \"nameCardHolder\": \"tes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/user/updateinfo"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "getAllProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZW1haWwgdGVzIDMiLCJpYXQiOjE3MDU1OTAzNjEsInJvbGVzIjoiIn0.p-oi2_M6IfAaExsuDANkrQrYcM3SD7t43I3SQ-DLQXmUHydfmxJdorJc5bJTNuhKKxciiU1bI4FcrS5EEivAYRZCN033XqpnplBXPXceNPNJmwKYQ3TQWYgFd_IHejpRER1oPsgDRDGl91SG6Z37RksVPUwDq_yulkj7j5UixgTdV8n47k_7-c4WtzAxmxJCcmQ0q8ug6yd8tKdfjxaMnHLthI1Rx2JBd-JGL4PyURHnl-AkaioVm1gUliDuRBtCayQrjnQEkIx7GD4f7jDLv43l0sia_G46WDnIQfQ7SeQLqjAwRO5PA9BLBTmd5D_jQR2zKO-UkbMhvjxAEOYfvg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/product/list"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Class",
+			"item": [
+				{
+					"name": "registerClass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"\",\r\n    \"email\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/register"
+					},
+					"response": []
+				},
+				{
+					"name": "cancelClass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"\",\r\n    \"email\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/cancel"
+					},
+					"response": []
+				},
+				{
+					"name": "updateClass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"\",\r\n    \"email\":\"\",\r\n    \"quota\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/update"
+					},
+					"response": []
+				},
+				{
+					"name": "infoClass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/class/info"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "obes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email tes 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/obes"
+					},
+					"response": []
+				},
+				{
+					"name": "nonobes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/nonobes"
+					},
+					"response": []
+				},
+				{
+					"name": "confirmOTPpayment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/confirm"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/gym/payment/resendtoken"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
